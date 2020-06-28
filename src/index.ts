@@ -1,6 +1,6 @@
 class EventHub {
     // {'Event1': [fn1, fn2....]}
-    private cache = {}
+    private cache: { [key: string]: Array<(data: unknown) => void> } = {}
 
     on(EventName: string, fn: (data: unknown) => void) {
         this.cache[EventName] = this.cache[EventName] || []
