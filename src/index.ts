@@ -27,7 +27,7 @@ class EventHub {
  */
 function indexOf(arr: Array<unknown>, item: unknown) {
     if (arr === undefined) return -1
-    let index: number
+    let index = -1
     for (let i = 0; i < arr.length; ++i) {
         if (arr[i] === item) {
             index = i
